@@ -1,11 +1,7 @@
-function Home() {
-  
+const Home = () => {
     return (
-      <div className="mx-auto max-w-xl py-8">
-
-        <h1>Home</h1>
-      </div>
+        <div>test</div>
     )
-  }
+}
 
-  export default Home;
+export default Home;
