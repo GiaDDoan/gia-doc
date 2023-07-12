@@ -21,7 +21,7 @@ export default async function IndexPage() {
           </p>
           <div className="space-x-4">
             <Link href="/docs" className={cn(buttonVariants({ size: "lg" }))}>
-              View Notes
+              View Docs
             </Link>
             <Link
               href={siteConfig.links.github}
