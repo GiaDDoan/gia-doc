@@ -1,8 +1,118 @@
 ---
 title: Merge Sort
-description: Build your documentation site using Contentlayer and MDX.
+description: Divide, conquer, and merge for sorted order!
 ---
 
-## Test1
+Merge Sort is a popular sorting algorithm that follows the divide-and-conquer approach.
+It works by recursively dividing the array into smaller subarrays, sorting them individually,
+and then merging them back together in sorted order.
 
-## Test 2
+The merging process combines the sorted subarrays
+by comparing elements and placing them in the correct order. Merge Sort is known for its stability,
+predictable time complexity of O(n log n), and suitability for handling large datasets.
+
+## Examples
+
+### 1. Everyday Applications
+
+<Callout>
+
+##### 1a. Music playlist sorting:
+
+Imagine you have a large music playlist with songs in random order.
+To organize your playlist alphabetically or by song duration, you can use Merge Sort.
+
+Divide the playlist into smaller parts and sort each part based on the song's title or duration. Then, merge the sorted parts
+together, comparing the songs and placing them in the correct order. This way, you can have a
+well-organized and enjoyable playlist.
+
+</Callout>
+
+<Callout>
+
+##### 1b. Bookshelf organization:
+
+If you have a messy bookshelf with books of various genres and authors,
+Merge Sort can help you organize it systematically.
+
+Split the books into smaller groups based on genres or authors. Sort each
+group independently,arranging the books within each category.
+Merge the sorted groups together, considering the genre or author, to
+create an organized bookshelf where books of the same genre or author are grouped together.
+
+</Callout>
+
+### 2. Coding Scenarios
+
+## Code
+
+<Callout>
+##### 2a. Sorting an Array:
+
+Implement Merge Sort to sort an array of numbers in ascending or descending order.
+This scenario involves dividing the array into smaller subarrays, recursively sorting them,
+and merging the sorted subarrays to obtain the final sorted array.
+
+</Callout>
+
+<Callout>
+
+##### 2b. External Sorting:
+
+In scenarios where the dataset is too large to fit in memory, Merge Sort can be used for external sorting.
+This involves reading chunks of data from external storage, sorting them using Merge Sort,
+and merging the sorted chunks until the entire dataset is sorted.
+
+</Callout>
+
+<Callout>
+
+This is an example in JavaScript.
+
+</Callout>
+
+```js
+function mergeSort(arr) {
+  // Base case: if the array has 0 or 1 element, it is already sorted
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // Divide the array into two halves
+  const mid = Math.floor(arr.length / 2);
+  const leftHalf = arr.slice(0, mid);
+  const rightHalf = arr.slice(mid);
+
+  // Recursively sort the two halves
+  const sortedLeft = mergeSort(leftHalf);
+  const sortedRight = mergeSort(rightHalf);
+
+  // Merge the sorted halves
+  return merge(sortedLeft, sortedRight);
+}
+
+function merge(left, right) {
+  let merged = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  // Merge the two sorted subarrays
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] <= right[rightIndex]) {
+      merged.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      merged.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  // Append any remaining elements from the left or right subarray
+  return merged.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+
+// Example usage
+const arr = [7, 2, 5, 1, 8, 3];
+const sortedArr = mergeSort(arr);
+console.log(sortedArr);
+```
