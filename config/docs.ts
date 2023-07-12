@@ -49,17 +49,15 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Blog",
+      title: "Sorting Algorithms",
       items: [
         {
           title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
+          href: "/docs/sorting-algorithms",
         },
         {
-          title: "Build your own",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Merge Sort",
+          href: "/docs/sorting-algorithms/merge-sort",
         },
         {
           title: "Writing Posts",
