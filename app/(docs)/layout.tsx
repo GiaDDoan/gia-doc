@@ -7,6 +7,7 @@ import { MainNav } from "@/components/main-nav"
 import { DocsSearch } from "@/components/search"
 import { DocsSidebarNav } from "@/components/sidebar-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { ModeToggle } from "@/components/mode-toggle"
 
 interface DocsLayoutProps {
   children: React.ReactNode
@@ -34,6 +35,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 <span className="sr-only">GitHub</span>
               </Link>
             </nav>
+            <ModeToggle />
           </div>
         </div>
       </header>

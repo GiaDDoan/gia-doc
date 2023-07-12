@@ -4,7 +4,7 @@ import {
     Check,
     ChevronLeft,
     ChevronRight,
-    Command,
+    Feather,
     CreditCard,
     File,
     FileText,
@@ -29,7 +29,7 @@ import {
   export type Icon = LucideIcon
   
   export const Icons = {
-    logo: Command,
+    logo: Feather,
     close: X,
     spinner: Loader2,
     chevronLeft: ChevronLeft,

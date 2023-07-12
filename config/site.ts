@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
   url: "",
   ogImage: "",
   links: {
-    twitter: "",
+    twitter: "https://www.linkedin.com/in/giaddoan/",
     github: "https://github.com/GiaDDoan/gia-doc",
   },
 }

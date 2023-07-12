@@ -43,9 +43,7 @@ export default async function IndexPage() {
             Features
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project is an experiment to see how a modern app, with features
-            like auth, subscriptions, API routes, and static pages would work in
-            Next.js 13 app dir.
+            I utilize this project for my personal endeavors, aiming to acquire knowledge and preserve it for future reference.
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
@@ -78,19 +76,6 @@ export default async function IndexPage() {
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <svg viewBox="0 0 24 24" className="h-12 w-12 fill-current">
-                <path d="M0 12C0 5.373 5.373 0 12 0c4.873 0 9.067 2.904 10.947 7.077l-15.87 15.87a11.981 11.981 0 0 1-1.935-1.099L14.99 12H12l-8.485 8.485A11.962 11.962 0 0 1 0 12Zm12.004 12L24 12.004C23.998 18.628 18.628 23.998 12.004 24Z" />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Database</h3>
-                <p className="text-sm text-muted-foreground">
-                  ORM using Prisma and deployed on PlanetScale.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <svg viewBox="0 0 24 24" className="h-12 w-12 fill-current">
                 <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
               </svg>
               <div className="space-y-2">
@@ -104,42 +89,17 @@ export default async function IndexPage() {
           </div>
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                className="h-12 w-12 fill-current"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <svg role="img" viewBox="0 0 24 24" className="h-12 w-12 fill-current">
+                <path d="M.79 7.12h22.42c.436 0 .79.355.79.792v8.176c0 .436-.354.79-.79.79H.79a.79.79 0 0 1-.79-.79V7.912a.79.79 0 0 1 .79-.791V7.12Zm2.507 7.605v-3.122l1.89 1.89L7.12 11.56v3.122h1.055v-5.67l-2.99 2.99L2.24 9.056v5.67h1.055v-.001Zm8.44-1.845-1.474-1.473-.746.746 2.747 2.747 2.745-2.747-.746-.746-1.473 1.473v-4h-1.054v4Zm10.041.987-2.175-2.175 2.22-2.22-.746-.746-2.22 2.22-2.22-2.22-.747.746 2.22 2.22-2.176 2.177.746.746 2.177-2.177 2.176 2.175.745-.746Z"/>
               </svg>
               <div className="space-y-2">
-                <h3 className="font-bold">Authentication</h3>
+                <h3 className="font-bold">MDX</h3>
                 <p className="text-sm text-muted-foreground">
-                  Authentication using NextAuth.js and middlewares.
+                  Combine Markdown and JSX for interactive and dynamic content.
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <svg viewBox="0 0 24 24" className="h-12 w-12 fill-current">
-                <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z" />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Subscriptions</h3>
-                <p className="text-sm text-muted-foreground">
-                  Free and paid subscriptions using Stripe.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto text-center md:max-w-[58rem]">
-          <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-             also includes a blog and a full-featured documentation site
-            built using Contentlayer and MDX.
-          </p>
         </div>
       </section>
     </>
