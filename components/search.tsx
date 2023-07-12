@@ -14,7 +14,7 @@ export function DocsSearch({ className, ...props }: DocsSearchProps) {
 
     return toast({
       title: "Not implemented",
-      description: "We're still working on the search.",
+      description: "Still a work in progress.",
     })
   }
 
