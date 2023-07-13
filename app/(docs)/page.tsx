@@ -16,7 +16,7 @@ export default async function IndexPage() {
             This app is a notebook for myself!
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            It is not used for educational purpose! Just a place to regroup a few of the
+            It is not used for educational purpose. Just a place to regroup a few of the
             concepts I have learned.
           </p>
           <div className="space-x-4">
