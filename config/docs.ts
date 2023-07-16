@@ -18,37 +18,6 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Documentation",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/documentation",
-        },
-        {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Components",
-          href: "/docs/documentation/components",
-        },
-        {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
-        },
-        {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
-        },
-        {
-          title: "Search",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
       title: "Sorting Algorithms",
       items: [
         {
@@ -60,9 +29,8 @@ export const docsConfig: DocsConfig = {
           href: "/docs/sorting-algorithms/merge-sort",
         },
         {
-          title: "Writing Posts",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Insertion Sort",
+          href: "/docs/sorting-algorithms/insertion-sort",
         },
       ],
     },

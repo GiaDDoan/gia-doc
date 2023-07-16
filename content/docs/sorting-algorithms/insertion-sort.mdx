@@ -1,0 +1,104 @@
+---
+title: Insertion Sort
+description: Build the sorted array one element at a time!
+---
+
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time.
+It works by iteratively considering each element in the array and placing it in its correct position within the already sorted subarray.
+
+Insertion Sort has an average time complexity of O(n^2) but performs well for small arrays or partially sorted arrays.
+It is an in-place sorting algorithm, meaning it does not require additional memory beyond the input array.
+
+## Examples
+
+### 1. Everyday Applications
+
+<Callout>
+
+#### 1a. Ordering a Deck of Cards
+
+Imagine you have a deck of cards that is randomly shuffled.
+To arrange the cards in ascending or descending order, you can use Insertion Sort.
+
+Start with an empty hand and pick cards from the deck one by one.
+For each new card, compare it with the cards in your hand and place it in the correct position.
+Repeat this process until you have picked all the cards, resulting in a sorted deck.
+
+</Callout>
+
+<Callout>
+
+##### 1b. Arranging Names in a Guest List
+
+Suppose you have a guest list with names in no particular order.
+You can use Insertion Sort to arrange the names alphabetically.
+
+Start with an empty sorted list and consider each name in the unsorted list.
+Compare it with the names in the sorted list and insert it in the correct position.
+Continue this process until all names are placed in the sorted order.
+
+</Callout>
+
+### 2. Coding Scenarios
+
+<Callout>
+##### 2a. Sorting an Array of Students
+
+Consider an array of student objects, where each object represents a student with properties like name, age, and grade.
+To sort the students based on a specific property (e.g., grade or age), you can use Insertion Sort.
+
+Begin with an empty sorted array and iterate over the unsorted array.
+For each student, compare the value of the desired property with the students in the sorted array
+and insert the student in the appropriate position to maintain the desired order.
+
+</Callout>
+
+<Callout>
+
+##### 2b. Ordering an Array of Dates
+
+Suppose you have an array of dates in no particular order.
+To arrange the dates chronologically, you can use Insertion Sort.
+
+Start with an empty sorted array and consider each date in the unsorted array.
+Compare it with the dates in the sorted array and insert it in the correct position.
+Repeat this process until all dates are placed in the sorted order.
+
+</Callout>
+
+## Code Snippet
+
+<Callout>
+  This is an example in JavaScript, you can try it out and make your own
+  modifications! [CodeSandbox](https://codesandbox.io/s/insertion-sort-d7pcpv)
+</Callout>
+
+```js
+function insertionSort(arr) {
+  const n = arr.length;
+
+  for (let i = 1; i < n; i++) {
+    const key = arr[i]; // Select the current element as the key
+    let j = i - 1; // Set the initial position for comparison
+
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j]; // Shift elements greater than the key to the right
+      j--; // Move to the previous position for comparison
+    }
+
+    arr[j + 1] = key; // Place the key in its correct position
+  }
+
+  return arr; // Return the sorted array
+}
+
+// Example usage
+const arr = [7, 2, 5, 1, 8, 3];
+const sortedArr = insertionSort(arr); // Call the insertionSort function to sort the array
+console.log(sortedArr); // Output the sorted array
+```
+
+## Extra Ressources
+
+1. A simple sorting visualizer made by myself! [Here](https://g-sorting-visualizer.netlify.app/)
+2. [GeeksForGeeks](https://www.geeksforgeeks.org/insertion-sort/)
