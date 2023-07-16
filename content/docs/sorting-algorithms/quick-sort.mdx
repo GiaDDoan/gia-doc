@@ -1,0 +1,101 @@
+---
+title: Quick Sort
+description: Efficient sorting using the divide-and-conquer approach!
+---
+
+Quick Sort is a widely used sorting algorithm that follows the divide-and-conquer approach.
+It works by selecting a pivot element from the array and partitioning the other elements into two sub-arrays,
+according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
+
+Quick Sort is known for its efficiency and average time complexity of O(n log n).
+It is often faster in practice compared to other sorting algorithms and widely used in various applications.
+
+## Examples
+
+### 1. Everyday Applications
+
+<Callout>
+##### 1a. Sorting Names in an Address Book:
+
+Consider an address book with names in random order.
+To alphabetically sort the names, you can use Quick Sort.
+
+Choose a pivot element from the list of names and partition the remaining names into two sub-arrays:
+one with names smaller than the pivot and another with names greater than the pivot.
+Recursively apply Quick Sort to both sub-arrays and combine the sorted results to obtain the final sorted list.
+
+</Callout>
+
+<Callout>
+##### 1b. Employee Ranking by Performance:
+
+Suppose you have a list of employees with their performance scores.
+To rank them based on their performance, you can use Quick Sort.
+
+Select a pivot element (e.g., median performance score) and partition the employees into two sub-arrays:
+one with employees having scores lower than the pivot and another with scores higher than the pivot.
+Recursively apply Quick Sort to both sub-arrays and merge the sorted results to obtain the final ranking.
+
+</Callout>
+
+### 2. Coding Scenarios
+
+<Callout>
+##### 2a. Sorting an Array:
+
+Implement Quick Sort to sort an array of numbers in ascending or descending order.
+This scenario involves selecting a pivot, partitioning the array, and recursively sorting the sub-arrays.
+
+</Callout>
+
+<Callout>
+##### 2b. Duplicates Removal:
+
+In scenarios where an array contains duplicate elements, Quick Sort can be used to remove duplicates and obtain a distinct sorted array.
+
+By applying Quick Sort, the duplicates are grouped together during partitioning.
+After sorting, the duplicates can be removed to obtain a distinct array.
+
+</Callout>
+
+## Code Snippet
+
+<Callout>
+  This is an example in JavaScript, you can try it out and make your own
+  modifications! [CodeSandbox](https://codesandbox.io/s/quick-sort-qzvllp)
+</Callout>
+
+```js
+function quickSort(arr) {
+  // Base case: if the array has 0 or 1 element, it is already sorted
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[arr.length - 1]; // Select the last element as the pivot
+  const left = [];
+  const right = [];
+
+  // Partition the array into two sub-arrays
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] <= pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+
+  // Recursively sort the sub-arrays and combine the results
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+// Example usage
+const arr = [7, 2, 5, 1, 8, 3];
+const sortedArr = quickSort(arr);
+console.log(sortedArr);
+```
+
+## Extra Ressources
+
+1. A simple sorting visualizer made by myself! [Here](https://g-sorting-visualizer.netlify.app/)
+2. [GeeksForGeeks - Quick Sort](https://www.geeksforgeeks.org/quick-sort/)

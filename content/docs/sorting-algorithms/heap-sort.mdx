@@ -1,0 +1,138 @@
+---
+title: Heap Sort
+description: Efficient sorting using a binary heap!
+---
+
+Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure.
+It leverages the heap property to efficiently build a sorted array.
+
+The algorithm first builds a max heap from the input array. In a max heap, the parent nodes are greater than or equal to their children.
+After building the max heap, the largest element (at the root) is swapped with the last element of the heap and removed from consideration.
+The process is repeated for the remaining elements until the entire array is sorted in ascending order.
+
+## Examples
+
+### 1. Everyday Applications
+
+##### 1a. Event Scheduling
+
+Heap Sort can aid in scheduling and managing events in a calendar application.
+
+For instance, consider a calendar application where users create events with different start times.
+Heap Sort can be used to sort the events based on their start times, enabling efficient retrieval and display of the scheduled events in chronological order.
+This ensures that users can easily visualize their events and plan their day effectively.
+
+</Callout>
+
+<Callout>
+##### 1b. Sports Leaderboard
+Heap Sort can be employed to maintain and update a sports leaderboard in real-time.
+
+Imagine a sports competition where participants earn points based on their performance.
+To display the leaderboard in descending order of points, Heap Sort can be used.
+With Heap Sort, you can efficiently update the leaderboard as new scores come in and ensure that the players are ranked correctly.
+
+</Callout>
+
+### 2. Coding Scenarios
+
+<Callout>
+##### 2a. Sorting an Array of Numbers
+
+Suppose you have an array of numbers that you want to sort in ascending or descending order.
+You can use Heap Sort to efficiently rearrange the elements and obtain the desired sorted array.
+
+Heap Sort builds a max heap from the array and repeatedly extracts the maximum element from the heap,
+placing it in the sorted portion of the array. By repeating this process, the entire array becomes sorted.
+
+</Callout>
+
+<Callout>
+
+##### 2b. Sorting an Array of Objects
+
+If you have an array of objects, each containing a key or attribute, and you want to sort the array based on that key,
+Heap Sort can be a suitable choice.
+
+Create a comparison function that compares the desired key or attribute of two objects.
+Use the comparison function to build a max heap, and then extract the maximum element iteratively
+to obtain the sorted array based on the desired key.
+
+</Callout>
+
+## Code Snippet
+
+<Callout>
+
+This is an example in JavaScript, you can try it out and make your own modifications! [CodeSandbox](https://codesandbox.io/s/heap-sort-j5y3rd)
+
+</Callout>
+
+```js
+function heapSort(arr) {
+  const n = arr.length;
+
+  // Build a max heap
+  buildMaxHeap(arr);
+
+  // Heapify the array
+  for (let i = n - 1; i > 0; i--) {
+    // Swap the root (maximum element) with the last element
+    swap(arr, 0, i);
+
+    // Restore the max heap property
+    heapify(arr, i, 0);
+  }
+
+  return arr;
+}
+
+function buildMaxHeap(arr) {
+  const n = arr.length;
+  const startIdx = Math.floor(n / 2) - 1;
+
+  // Heapify each subtree starting from the last non-leaf node
+  for (let i = startIdx; i >= 0; i--) {
+    heapify(arr, n, i);
+  }
+}
+
+function heapify(arr, n, rootIdx) {
+  let largestIdx = rootIdx;
+  const leftIdx = 2 * rootIdx + 1;
+  const rightIdx = 2 * rootIdx + 2;
+
+  // Find the largest element among the root and its children
+  if (leftIdx < n && arr[leftIdx] > arr[largestIdx]) {
+    largestIdx = leftIdx;
+  }
+
+  if (rightIdx < n && arr[rightIdx] > arr[largestIdx]) {
+    largestIdx = rightIdx;
+  }
+
+  // Swap the root with the largest element if needed
+  if (largestIdx !== rootIdx) {
+    swap(arr, rootIdx, largestIdx);
+
+    // Recursively heapify the affected subtree
+    heapify(arr, n, largestIdx);
+  }
+}
+
+function swap(arr, i, j) {
+  const temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+// Example usage
+const arr = [7, 2, 5, 1, 8, 3];
+const sortedArr = heapSort(arr);
+console.log(sortedArr);
+```
+
+## Extra Ressources
+
+1. A simple sorting visualizer made by myself! [Here](https://g-sorting-visualizer.netlify.app/)
+2. [GeeksForGeeks - Heap Sort](https://www.geeksforgeeks.org/heap-sort/)

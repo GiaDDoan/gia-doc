@@ -32,6 +32,18 @@ export const docsConfig: DocsConfig = {
           title: "Insertion Sort",
           href: "/docs/sorting-algorithms/insertion-sort",
         },
+        {
+          title: "Heap Sort",
+          href: "/docs/sorting-algorithms/heap-sort",
+        },
+        {
+          title: "Quick Sort",
+          href: "/docs/sorting-algorithms/quick-sort",
+        },
+        {
+          title: "Bubble Sort",
+          href: "/docs/sorting-algorithms/bubble-sort",
+        },
       ],
     },
     {

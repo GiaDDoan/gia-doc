@@ -1,0 +1,101 @@
+---
+title: Bubble Sort
+description: Simple sorting through repeated comparisons!
+---
+
+Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+The algorithm iterates through the array multiple times, gradually moving the largest (or smallest) elements towards their correct positions.
+
+Although Bubble Sort has a time complexity of O(n^2) in the worst case, it can be useful for small datasets or partially sorted arrays.
+
+## Examples
+
+### 1. Everyday Applications
+
+<Callout>
+##### 1a. Sorting a Deck of Cards:
+
+Imagine you have a deck of cards that is randomly shuffled.
+To arrange the cards in ascending or descending order, you can use Bubble Sort.
+
+Start with the first card and compare it with the next card. If they are in the wrong order, swap them.
+Continue this process throughout the deck until all the cards are sorted.
+Bubble Sort is a straightforward algorithm to sort a small deck of cards.
+
+</Callout>
+
+<Callout>
+##### 1b. Grade Sorting:
+
+In an educational setting, Bubble Sort can be used to sort student grades in ascending or descending order.
+
+Compare the grades of adjacent students and swap them if they are in the wrong order.
+Continue iterating through the grades until the list is sorted.
+Bubble Sort provides a simple way to arrange grades for analysis or reporting purposes.
+
+</Callout>
+
+### 2. Coding Scenarios
+
+<Callout>
+##### 2a. Sorting an Array:
+
+Implement Bubble Sort to sort an array of numbers in ascending or descending order.
+This scenario involves repeatedly comparing adjacent elements and swapping them if necessary.
+
+</Callout>
+
+<Callout>
+##### 2b. Checking for Sortedness:
+
+Bubble Sort can also be used to check if an array is already sorted.
+
+By performing a pass through the array with Bubble Sort, you can determine if any swaps were made.
+If no swaps occur during a pass, it indicates that the array is already sorted.
+
+</Callout>
+
+## Code Snippet
+
+<Callout>
+  This is an example in JavaScript, you can try it out and make your own
+  modifications! [CodeSandbox](https://codesandbox.io/s/bubble-sort-zxy4hg)
+</Callout>
+
+```js
+function bubbleSort(arr) {
+  const n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    let swapped = false;
+
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Swap elements if they are in the wrong order
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+
+        swapped = true;
+      }
+    }
+
+    // If no swaps occur during a pass, the array is already sorted
+    if (!swapped) {
+      break;
+    }
+  }
+
+  return arr;
+}
+
+// Example usage
+const arr = [7, 2, 5, 1, 8, 3];
+const sortedArr = bubbleSort(arr);
+console.log(sortedArr);
+```
+
+## Extra Ressources
+
+1. A simple sorting visualizer made by myself! [Here](https://g-sorting-visualizer.netlify.app/)
+2. [GeeksForGeeks - Bubble Sort](https://www.geeksforgeeks.org/bubble-sort/)
