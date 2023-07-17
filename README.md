@@ -8,13 +8,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 pnpm install
 ```
 
-### 2.Build the contentlayer
+### 2. Build the contentlayer
 
 ```bash
 pnpm build
 ```
 
-### 3.Run the development server:
+### 3. Run the development server:
 
 ```bash
 pnpm dev
