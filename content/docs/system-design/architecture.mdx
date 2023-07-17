@@ -3,4 +3,112 @@ title: Architecture
 description: Building bridges between ideas and technology
 ---
 
-Defining the overall structure and organization of the system, such as choosing between monolithic or microservices architecture, and determining how different components interact with each other.
+Defining the overall structure and organization of the system, such as choosing between monolithic or microservices
+architecture, and determining how different components interact with each other.
+
+## Important Aspects of System Architecture
+
+### 1. Monolithic Architecture
+
+This architecture style involves building the entire system as a single, self-contained unit. All components are
+tightly coupled and run on a single platform. Monolithic architectures are relatively simple to develop and deploy but
+can become challenging to maintain and scale as the system grows.
+
+<Callout>
+
+#### Examples:
+
+- Content Management Systems (CMS) like WordPress or Drupal.
+- Traditional desktop applications with a single executable file containing all the functionality.
+- Enterprise Resource Planning (ERP) systems where all modules are tightly integrated.
+
+</Callout>
+
+### 2. Client-Server Architecture
+
+In this architecture, the system is divided into two main components: clients and servers.
+Clients request services or resources from servers, which handle the processing and respond back to the clients.
+This architecture allows for distributed computing, scalability, and separation of concerns between client and server components.
+
+<Callout>
+
+#### Examples:
+
+- Web applications where the server handles business logic and data storage, while the client (web browser) renders
+  the user interface. Examples include e-commerce websites, social media platforms, and online banking systems.
+
+- Online multiplayer games where the game server manages game logic and player interactions.
+
+</Callout>
+
+### 3. Microservices Architecture
+
+Microservices architecture decomposes the system into a collection of small,
+independent services that can be developed, deployed, and scaled independently. Each microservice
+focuses on a specific business capability and communicates with other services via lightweight protocols like HTTP
+or messaging queues. This architecture enables agility, scalability, and resilience but introduces
+complexities in managing inter-service communication and data consistency.
+
+<Callout>
+
+#### Examples:
+
+- Netflix: Each microservice handles specific functionalities such as user authentication, content recommendation, billing, and video streaming.
+- Uber: Microservices handle tasks like ride requests, payments, driver management, and mapping.
+
+</Callout>
+
+### 4. Event-Driven Architecture
+
+This architectural style revolves around the concept of events. Components or services
+communicate by producing and consuming events. Event-driven architectures are highly
+scalable and loosely coupled, as components can react to events asynchronously. They
+are well-suited for real-time data processing, event sourcing, and reactive systems.
+
+<Callout>
+
+#### Examples:
+
+- Real-time analytics systems where data events are ingested, processed, and analyzed in real-time to generate insights or trigger actions.
+- Internet of Things (IoT) applications where devices generate events that trigger actions or updates in the system, such as smart home automation or industrial monitoring systems.
+
+</Callout>
+
+### 5. Layered Architecture
+
+This architecture organizes the system components into multiple layers, each responsible
+for a specific set of functionalities. Typically, a layered architecture consists of presentation,
+business logic, and data layers. Each layer communicates with the adjacent layers, following
+a defined set of protocols and interfaces. Layered architectures promote separation of concerns and modularity.
+
+<Callout>
+
+#### Examples:
+
+- Three-tier web applications with a presentation layer (web UI), application layer (business logic), and data layer (database).
+- Enterprise software with layers for presentation, application services, business logic, data access, and data storage.
+
+</Callout>
+
+### 6. Service-Oriented Architecture (SOA)
+
+SOA emphasizes building applications as a collection of loosely coupled services that
+communicate with each other through standardized protocols. Services in an SOA can be independently
+developed, deployed, and versioned. This architecture promotes reusability, interoperability, and flexibility.
+
+<Callout>
+
+#### Examples:
+
+- Payment gateways where services handle payment processing, fraud detection, and transaction management.
+- Healthcare systems with services for patient registration, appointment scheduling, medical records, and billing.
+
+</Callout>
+
+## Conclusion
+
+While choosing an architecture, it's crucial to consider factors like scalability, performance,
+maintainability, fault tolerance, and the specific requirements of the system. There is
+no one-size-fits-all solution, and a combination of architectural patterns may be employed to
+address different aspects of the system. The chosen architecture should align with the goals,
+constraints, and future growth of the system.

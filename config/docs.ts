@@ -59,32 +59,37 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Components",
-          href: "/docs/system-design/components",
+          href: "/docs/in-progress",
         },
         {
           title: "Data Management",
           href: "/docs/system-design/data-management",
+          disabled: true,
         },
         {
           title: "Communication",
           href: "/docs/system-design/communication",
+          disabled: true,
         },
         {
           title: "Scalability and Performance",
           href: "/docs/system-design/scalability-and-performance",
+          disabled: true,
         },
         {
           title: "Security",
           href: "/docs/system-design/security",
+          disabled: true,
         },
         {
           title: "Error Handling and Fault Tolerance",
           href: "/docs/system-design/error-handling-and-fault-tolerance",
+          disabled: true,
         },
         {
           title: "Integration",
           href: "/docs/system-design/integration",
-          // disabled: true,
+          disabled: true,
         },
       ],
     },

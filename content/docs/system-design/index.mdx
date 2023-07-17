@@ -7,10 +7,97 @@ System design involves creating a blueprint for software solutions, breaking dow
 It's an exciting process of problem-solving and creative thinking to build reliable and scalable systems.
 
 <Callout>
+  As a fresh learner of this subject, please note that nothing presented here
+  represents the full lenght of the topic, as I am still in the early stages of
+  exploration!
+</Callout>
 
-As a fresh learner of this subject, please note that nothing presented here represents the full lenght of the topic,
-as I am still in the early stages of exploration!
+## Basic System Design
 
+### 1. User Interface (UI)
+
+The front-end layer that handles the presentation and interaction with users.
+It includes HTML, CSS, and JavaScript code responsible for rendering the user interface and handling user input.
+
+### 2. Web Server
+
+A server that receives HTTP requests from clients (browsers) and responds with HTML, CSS, and JavaScript files.
+It handles routing, serves static files, and communicates with other components.
+
+<Callout>
+  Example: An Apache or Nginx server that receives HTTP requests from clients
+  (browsers).
+</Callout>
+
+### 3. Application Server
+
+This server-side component handles the business logic of the application. It receives requests from the web server,
+processes data, interacts with databases, and performs any necessary computations or operations.
+
+<Callout>
+  Example: A Node.js server that runs the back-end application logic, handles
+  business operations, processes user requests, interacts with databases, and
+  generates dynamic content to be served to the client.
+</Callout>
+
+### 4. Database
+
+A persistent storage system that stores application data. It could be a relational database like MySQL or PostgreSQL,
+or a NoSQL database like MongoDB. The application server communicates with the database to read and write data.
+
+<Callout>
+  Example: For the MySQL database that stores user data, application settings,
+  and other relevant information. It allows the application server to read from
+  and write to the database using SQL queries to store and retrieve data.
+</Callout>
+
+### 5. APIs
+
+Application Programming Interfaces (APIs) provide a way for different components to communicate and exchange data.
+APIs define rules and protocols for data exchange, allowing the front-end (UI) to communicate with the application server or any external services.
+
+<Callout>
+  Example: RESTful APIs implemented using Express.js, which define endpoints and
+  provide a way for the front-end to communicate with the application server.
+  These APIs handle requests for data retrieval, data creation, and other
+  application-specific operations.
+</Callout>
+
+### 6. Authentication & Authorization
+
+Components responsible for user authentication and authorization. They handle user registration, login, session management,
+and permissions to control access to specific resources.
+
+<Callout>
+  Example: User authentication and authorization handled using a JSON Web Token
+  (JWT) approach. Users register and log in, and the server generates a token
+  upon successful authentication. This token is then used to authorize
+  subsequent requests and control access to protected resources.
+</Callout>
+
+### 7. Caching & Load Balancing
+
+These components help improve system performance and scalability. Caching stores frequently accessed data in memory
+for faster retrieval, while load balancing distributes incoming requests across multiple servers to handle increased traffic.
+
+<Callout>
+  Example: Redis as an in-memory cache to store frequently accessed data,
+  reducing the load on the database and improving response times. Load balancing
+  is achieved using a load balancer like NGINX or HAProxy, distributing incoming
+  requests across multiple instances of the application server for better
+  scalability and performance.
+</Callout>
+
+### 8. Monitoring & Logging
+
+Tools and mechanisms for monitoring the system's health, performance, and error tracking.
+Logging captures events and errors for analysis and debugging purposes."
+
+<Callout>
+  Example: Integration with monitoring and logging tools like New Relic or
+  Datadog to track application performance, monitor server health, and collect
+  logs for debugging and analysis purposes. Logs capture important events,
+  errors, and system metrics for future reference.
 </Callout>
 
 ## Concepts
@@ -23,45 +110,49 @@ Select a concept below to learn more about it.
 
 ### Architecture
 
+Building bridges between ideas and technology
+
 </Card>
 
 <Card href="/docs/in-progress">
 
 ### Components
 
+The building blocks of innovative solutions
+
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/system-design/data-management" disabled>
 
 ### Data Management
 
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/in-progress" disabled>
 
 ### Communication
 
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/system-design/scalability-and-performance" disabled>
 
 ### Scalability and Performance
 
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/system-design/security" disabled>
 
 ### Security
 
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/system-design/error-handling-and-fault-tolerance" disabled>
 
 ### Error Handling and Fault Tolerance
 
 </Card>
 
-<Card href="/docs/in-progress">
+<Card href="/docs/system-design/integration" disabled>
 
 ### Integration
 
